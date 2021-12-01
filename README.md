@@ -2,7 +2,7 @@
 
 ## Installation
 
-A Docker Compose file has been provided for the project. You can clone the project and check whether everything works by running
+A Docker Compose file has been provided for the project. The project can be cloned and run by using the below command,
 
 ```
 docker-compose up -d --build
