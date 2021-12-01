@@ -36,7 +36,6 @@ def scraping_process(base_url: str):
     """
     try:
 
-        start = datetime.now()
         print('Scraping request started')
 
         soup = get_content(base_url)
@@ -47,6 +46,7 @@ def scraping_process(base_url: str):
 
         # Scrape the website for category names for a given manufacturer
         for a_man in manufacturers:
+            start = datetime.now()
             print(f'Scraping started for manufacturer - {a_man}!')
             categories, models, parts = [], [], []
             soup = get_content(base_url + a_man)
