@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  app:
+    build: ./app/
+    command: python ./app/scraper.py
+    volumes:
+      - .:/scraper
+  api:
+    build: ./api/
+    command: python ./api/main.py
+    volumes:
+      - .:/restapi
+    ports:
+      - '8001:8001'
